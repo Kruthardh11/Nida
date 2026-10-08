@@ -1,0 +1,14 @@
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "fullName": "John Doe",
+  "email": "johndoe@example.com",
+  "phone": "+1234567890",
+  "address": "123 Main Street, Suite 100",
+  "city": "San Francisco",
+  "zipcode": "94105",
+  "company": "Acme Corp",
+  "username": "johndoe",
+  "gender": "male",
+  "birthday": "1995-05-15"
+}

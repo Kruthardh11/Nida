@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nida Core</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-panel">
+        <div class="header">
+            <h2>NIDA CORE</h2>
+            <div id="status-badge" class="badge awake">AWAKE</div>
+        </div>
+        
+        <div class="orb-container">
+            <div id="orb" class="orb listening"></div>
+            <p id="status-text">Listening...</p>
+        </div>
+
+        <div class="transcript-container">
+            <div class="bubble user" id="user-transcript">Say something to Nida...</div>
+            <div class="bubble nida" id="nida-response"></div>
+        </div>
+
+        <div class="controls">
+            <button id="btn-sleep" class="btn secondary">Sleep (Ctrl+Alt+S)</button>
+            <button id="btn-wake" class="btn primary">Wake (Ctrl+Alt+N)</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

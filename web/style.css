@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    color: #f8fafc;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.badge.awake { background: rgba(52, 211, 153, 0.2); color: #34d399; }
+.badge.sleeping { background: rgba(248, 113, 113, 0.2); color: #f87171; }
+
+/* The Orb */
+.orb-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.orb {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #38bdf8, #3b82f6);
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;
+}
+
+.orb.listening {
+    animation: pulse-listen 2s infinite ease-in-out;
+}
+
+.orb.sleeping {
+    background: radial-gradient(circle at 30% 30%, #475569, #1e293b);
+    box-shadow: 0 0 10px rgba(71, 85, 105, 0.2);
+    animation: pulse-sleep 4s infinite ease-in-out;
+}
+
+.orb.thinking {
+    background: radial-gradient(circle at 30% 30%, #c084fc, #9333ea);
+    box-shadow: 0 0 40px rgba(192, 132, 252, 0.6);
+    animation: spin-think 1.5s infinite linear;
+}
+
+@keyframes pulse-listen {
+    0% { transform: scale(1); box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(56, 189, 248, 0.7); }
+    100% { transform: scale(1); box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
+}
+
+@keyframes pulse-sleep {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(0.95); opacity: 0.4; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes spin-think {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+#status-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    letter-spacing: 1px;
+}
+
+/* Transcripts */
+.transcript-container {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.bubble {
+    padding: 12px 16px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    max-width: 85%;
+    line-height: 1.4;
+    transition: opacity 0.3s;
+}
+
+.bubble.user {
+    background: rgba(255, 255, 255, 0.1);
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.bubble.nida {
+    background: linear-gradient(90deg, rgba(56, 189, 248, 0.15), rgba(129, 140, 248, 0.15));
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn.primary {
+    background: linear-gradient(90deg, #38bdf8, #3b82f6);
+    color: white;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.btn.primary:hover {
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}

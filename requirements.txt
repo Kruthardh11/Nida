@@ -1,0 +1,14 @@
+faster-whisper
+sounddevice
+numpy
+langgraph
+pycaw
+pywin32
+psutil
+playwright
+pywhatkit
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+beautifulsoup4
+python-dateutil

@@ -1,0 +1,24 @@
+{
+    "2026-04-23": {
+        "calories": 2100.0,
+        "protein": 60,
+        "steps": 9000.0,
+        "water_liters": 3.0,
+        "sleep_hours": 7.0,
+        "weight_kg": 0.0,
+        "workout_done": true,
+        "squats_done": true,
+        "notes": []
+    },
+    "2026-04-24": {
+        "calories": 0,
+        "protein": 0,
+        "steps": 0,
+        "water_liters": 0.0,
+        "sleep_hours": 0.0,
+        "weight_kg": 0.0,
+        "workout_done": false,
+        "squats_done": false,
+        "notes": []
+    }
+}
